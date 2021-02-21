@@ -26,7 +26,7 @@ export class QuestionnaireComponent implements OnInit {
         type: 'stepper',
         fieldGroup: [
           {
-            templateOptions: { label: items[0].linkId + '  ' + items[0].text },
+            templateOptions: { label: items[0].linkId + '  Allergies' },
             fieldGroup: [
               {
                 key: items[0].linkId,
@@ -68,6 +68,7 @@ export class QuestionnaireComponent implements OnInit {
                 templateOptions: {
                   label: items[1].item[1].linkId + '  ' + items[1].item[1].text,
                   required: true,
+
                 }
               },
               {
