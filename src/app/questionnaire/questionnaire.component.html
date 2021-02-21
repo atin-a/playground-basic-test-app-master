@@ -1,0 +1,15 @@
+<header>
+    <mat-toolbar>
+        <span>{{questionnaire?.resourceType}}</span>
+    </mat-toolbar>
+</header>
+
+<main>
+    <form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit(form)" >
+        <formly-form    [model]="model" 
+                        [options]="options"  
+                        [fields]="fields" 
+                        [form]="form">
+        </formly-form>
+    </form>
+</main>
