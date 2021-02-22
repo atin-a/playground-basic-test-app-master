@@ -40,12 +40,12 @@ The generated form will be more dynamic in the next iteration.
 
 * [x] In `QuestionnaireComponent`, generate a form using the `questionnaire.json` file in the `assests` folder. The form should have validation applied to each input.
 
-* [ ] Using the results from the form, generate a [`QuestionnaireResponse`](https://www.hl7.org/fhir/questionnaireresponse.html). The `QuestionnaireResponse` should follow the structure outlined in the [Resource Content Section](https://www.hl7.org/fhir/questionnaireresponse.html#resource)
+* [x] Using the results from the form, generate a [`QuestionnaireResponse`](https://www.hl7.org/fhir/questionnaireresponse.html). The `QuestionnaireResponse` should follow the structure outlined in the [Resource Content Section](https://www.hl7.org/fhir/questionnaireresponse.html#resource)
 
-* [ ] Display your results at the bottom of the page.
+* [x] Display your results at the bottom of the page.
 
-* [ ] Update the `QuestionnaireComponent` to be mobile-friendly.
+* [x] Update the `QuestionnaireComponent` to be mobile-friendly.
 
 * [ ] Please include unit tests for your work.
 
-* [ ] Commit your work.
+* [x] Commit your work.

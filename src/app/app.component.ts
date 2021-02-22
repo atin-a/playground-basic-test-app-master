@@ -12,7 +12,9 @@ export class AppComponent implements OnInit {
 
   constructor(
     private apiService: ApiService
-  ) { }
+  ) {
+    console.log("For mobile view, please resize and then refresh");
+  }
 
   ngOnInit() {
     this.apiService.getPatients().subscribe(

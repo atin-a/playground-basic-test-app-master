@@ -7,6 +7,8 @@ import { FieldType, FormlyFieldConfig } from '@ngx-formly/core';
   styleUrls: ['./formly-stepper.component.scss']
 })
 export class FormlyStepperComponent extends FieldType {
+  isMobile: boolean = document.body.clientWidth <= 800;
+
   isValid(field: FormlyFieldConfig) {
     if (field.key) {
       return field.formControl.valid;

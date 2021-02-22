@@ -1,4 +1,30 @@
-<mat-horizontal-stepper>
+<mat-vertical-stepper linear *ngIf="isMobile">
+    <mat-step
+      *ngFor="let step of field.fieldGroup; let index = index; let last = last;">
+      <ng-template matStepLabel>{{ step.templateOptions.label }}</ng-template>
+      <formly-field [field]="step"></formly-field>
+
+      <div class="button-row">
+        <button matStepperPrevious *ngIf="index !== 0"
+            mat-stroked-button
+            type="button">
+            Back
+        </button>
+
+        <button matStepperNext *ngIf="!last"
+            mat-stroked-button
+            type="button"
+            [disabled]="!isValid(step)">
+            Next
+        </button>
+
+        <button *ngIf="last" type="reset" mat-stroked-button color="warn">Clear</button>
+        <button *ngIf="last" type="submit" [disabled]="!form.valid" mat-raised-button color="primary">Submit</button>
+        
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+  <mat-horizontal-stepper linear *ngIf="!isMobile">
     <mat-step
       *ngFor="let step of field.fieldGroup; let index = index; let last = last;">
       <ng-template matStepLabel>{{ step.templateOptions.label }}</ng-template>
@@ -24,3 +50,4 @@
       </div>
     </mat-step>
   </mat-horizontal-stepper>
+  
