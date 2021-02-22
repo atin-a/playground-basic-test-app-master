@@ -12,7 +12,7 @@ export class Questionnaire {
 export class Items {
     linkId: string;
     text: string;
-    type: string;
+    type?: string;
     item?: Items[];
 }
 

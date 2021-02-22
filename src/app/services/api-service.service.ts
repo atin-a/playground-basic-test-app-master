@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
+import { Questionnaire } from '../shared/questionnaire';
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +18,8 @@ export class ApiService {
       { headers: this.getHeaders() });
   }
 
-  getQuestionnaire(): Observable<any> {
-    return this.httpClient.get('../assets/questionnaire.json');
-  }
-
-  submitQuestionnaire(data) {
-    return this.httpClient.post(environment.queryURI + '/?', data);
+  getQuestionnaire(): Observable<Questionnaire> {
+    return this.httpClient.get<Questionnaire>('../assets/questionnaire.json');
   }
 
   private getHeaders(): HttpHeaders {

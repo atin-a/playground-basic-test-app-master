@@ -16,13 +16,13 @@ import { FormlyMaterialModule } from '@ngx-formly/material';
 import { FormlyMatDatepickerModule } from '@ngx-formly/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
-import { FormlyFieldStepper } from './questionnaire/stepper.type';
+import { FormlyStepperComponent } from './formly-stepper/formly-stepper.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionnaireComponent,
-    FormlyFieldStepper
+    FormlyStepperComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +34,7 @@ import { FormlyFieldStepper } from './questionnaire/stepper.type';
     FormlyModule.forRoot({
       extras: { lazyRender: true },
       types: [
-        { name: 'stepper', component: FormlyFieldStepper, wrappers: [] },
+        { name: 'stepper', component: FormlyStepperComponent, wrappers: [] },
       ],
       validationMessages: [
         { name: 'required', message: 'This field is required' },
