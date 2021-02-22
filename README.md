@@ -2,7 +2,7 @@
 
 This project is a skeleton project for querying data from the [HAPI FHIR public test server](http://hapi.fhir.org/baseR4)
 
-A working multi-step questionnaire with some validations using [Formly](https://formly.dev/).
+A working multi-step questionnaire with validations using [Formly](https://formly.dev/).
 
 The generated form will be more dynamic in the next iteration.
 
